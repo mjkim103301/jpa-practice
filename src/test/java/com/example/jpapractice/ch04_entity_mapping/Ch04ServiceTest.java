@@ -9,18 +9,18 @@ import org.springframework.test.context.TestConstructor;
 
 @DataJpaTest
 @TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
-class ServiceTest {
-    private Service serviceClass;
+class Ch04ServiceTest {
+    private Ch04Service ch04ServiceClass;
 
     @Autowired
     EntityManagerFactory emf;
 
     @BeforeEach
     public void setUp(){
-        serviceClass = new Service(emf);
+        ch04ServiceClass = new Ch04Service(emf);
     }
     @Test
     public void transactionRunTest(){
-        serviceClass.transactionRunTest();
+        ch04ServiceClass.transactionRunTest();
     }
 }

@@ -6,7 +6,7 @@ import jakarta.persistence.EntityTransaction;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class Service {
+public class Ch04Service {
     private final EntityManagerFactory emf;
 
     public void transactionRunTest() {
