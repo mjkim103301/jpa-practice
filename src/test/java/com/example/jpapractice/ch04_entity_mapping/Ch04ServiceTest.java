@@ -1,7 +1,6 @@
 package com.example.jpapractice.ch04_entity_mapping;
 
 import jakarta.persistence.EntityManagerFactory;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +18,6 @@ class Ch04ServiceTest {
     @BeforeEach
     public void setUp(){
         ch04ServiceClass = new Ch04Service(emf);
-    }
-
-    @AfterEach
-    public void setDown(){
-        emf.close();
     }
     @Test
     public void transactionRunTest(){
