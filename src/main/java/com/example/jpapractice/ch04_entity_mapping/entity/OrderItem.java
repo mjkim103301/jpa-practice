@@ -1,7 +1,11 @@
 package com.example.jpapractice.ch04_entity_mapping.entity;
 
-import jakarta.persistence.*;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 /**
  * Created by holyeye on 2014. 3. 11..

@@ -2,7 +2,6 @@ package com.example.jpapractice.ch04_entity_mapping;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
 import jakarta.persistence.EntityTransaction;
 import lombok.RequiredArgsConstructor;
 
