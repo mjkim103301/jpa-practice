@@ -1,15 +1,13 @@
-package com.example.jpapractice.ch04_entity_mapping.entity;
+package com.example.jpapractice.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
-
 /**
  * Created by holyeye on 2014. 3. 11..
  */
-
 @Entity
 public class Item {
 
@@ -21,7 +19,6 @@ public class Item {
     private String name;        //이름
     private int price;          //가격
     private int stockQuantity;  //재고수량
-
 
     //Getter, Setter
     public Long getId() {

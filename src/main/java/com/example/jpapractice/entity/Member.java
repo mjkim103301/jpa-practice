@@ -1,15 +1,17 @@
-package com.example.jpapractice.ch04_entity_mapping.entity;
+package com.example.jpapractice.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by holyeye on 2014. 3. 11..
  */
-
 @Entity
 public class Member {
 
@@ -23,8 +25,10 @@ public class Member {
     private String street;
     private String zipcode;
 
-    //Getter, Setter
+    @OneToMany(mappedBy = "member")
+    private List<Order> orders = new ArrayList<Order>();
 
+    //Getter, Setter
     public Long getId() {
         return id;
     }
@@ -63,5 +67,13 @@ public class Member {
 
     public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 }

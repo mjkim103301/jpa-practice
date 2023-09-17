@@ -1,4 +1,4 @@
-package com.example.jpapractice.ch04_entity_mapping;
+package com.example.jpapractice.ch05_entity_mapping_basic;
 
 import jakarta.persistence.EntityManagerFactory;
 import org.junit.jupiter.api.BeforeEach;
@@ -7,20 +7,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.TestConstructor;
 
+
 @DataJpaTest
 @TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
-class ServiceTest {
-    private Service serviceClass;
+class Ch05ServiceTest {
+    private Ch05Service ch05ServiceClass;
 
     @Autowired
     EntityManagerFactory emf;
 
     @BeforeEach
     public void setUp(){
-        serviceClass = new Service(emf);
+        ch05ServiceClass = new Ch05Service(emf);
     }
     @Test
     public void transactionRunTest(){
-        serviceClass.transactionRunTest();
+        ch05ServiceClass.transactionRunTest();
     }
 }
